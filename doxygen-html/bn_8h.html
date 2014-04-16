@@ -91,6 +91,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">bn.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>multiprecision integer arithmetics  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;openssl/e_os2.h&gt;</code><br/>
 <code>#include &lt;stdio.h&gt;</code><br/>
 <code>#include &lt;openssl/ossl_typ.h&gt;</code><br/>
@@ -366,12 +369,6 @@ Functions</h2></td></tr>
 <tr class="memitem:a1a29d7513f49d2899433ea55cb3b5698"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bn_8h.html#a1a29d7513f49d2899433ea55cb3b5698">BN_generate_dsa_nonce</a> (<a class="el" href="ossl__typ_8h.html#a6fb19728907ec6515e4bfb716bffa141">BIGNUM</a> *<a class="el" href="ideatest_8c.html#afdf65de9e264331943a9e5a248271311">out</a>, const <a class="el" href="ossl__typ_8h.html#a6fb19728907ec6515e4bfb716bffa141">BIGNUM</a> *range, const <a class="el" href="ossl__typ_8h.html#a6fb19728907ec6515e4bfb716bffa141">BIGNUM</a> *priv, const unsigned char *message, size_t message_len, <a class="el" href="ossl__typ_8h.html#a0b235a35b7dd7922c097571ecd90e2bc">BN_CTX</a> *ctx)</td></tr>
 <tr class="memitem:a939e28f2f6df66c3e88717edef85e99d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ossl__typ_8h.html#a6fb19728907ec6515e4bfb716bffa141">BIGNUM</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bn_8h.html#a939e28f2f6df66c3e88717edef85e99d">bn_expand2</a> (<a class="el" href="ossl__typ_8h.html#a6fb19728907ec6515e4bfb716bffa141">BIGNUM</a> *<a class="el" href="hpux_8cc.html#af3e37283d97a42ffc096d8958a745f32">a</a>, int words)</td></tr>
 <tr class="memitem:a4c469b0949a9db2876c38e399343d458"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ossl__typ_8h.html#a6fb19728907ec6515e4bfb716bffa141">BIGNUM</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bn_8h.html#a4c469b0949a9db2876c38e399343d458">bn_dup_expand</a> (const <a class="el" href="ossl__typ_8h.html#a6fb19728907ec6515e4bfb716bffa141">BIGNUM</a> *<a class="el" href="hpux_8cc.html#af3e37283d97a42ffc096d8958a745f32">a</a>, int words)</td></tr>
-<tr class="memitem:ac7390b2c1f95cf296aaa80068bbea55c"><td class="memItemLeft" align="right" valign="top">BN_ULONG&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bn_8h.html#ac7390b2c1f95cf296aaa80068bbea55c">bn_mul_add_words</a> (BN_ULONG *rp, const BN_ULONG *ap, int num, BN_ULONG w)</td></tr>
-<tr class="memitem:ab53b589b38d0dba70e7af60e433a674d"><td class="memItemLeft" align="right" valign="top">BN_ULONG&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bn_8h.html#ab53b589b38d0dba70e7af60e433a674d">bn_mul_words</a> (BN_ULONG *rp, const BN_ULONG *ap, int num, BN_ULONG w)</td></tr>
-<tr class="memitem:a5099f504342e8405343b2f34a7e2042b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bn_8h.html#a5099f504342e8405343b2f34a7e2042b">bn_sqr_words</a> (BN_ULONG *rp, const BN_ULONG *ap, int num)</td></tr>
-<tr class="memitem:a11b748f408b37078e940634d00c0acdf"><td class="memItemLeft" align="right" valign="top">BN_ULONG&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bn_8h.html#a11b748f408b37078e940634d00c0acdf">bn_div_words</a> (BN_ULONG <a class="el" href="ec__curve_8c.html#a5138e082c1d42b393c076f8f796b3c96">h</a>, BN_ULONG l, BN_ULONG d)</td></tr>
-<tr class="memitem:a8da498661b663764efd236e8973c5007"><td class="memItemLeft" align="right" valign="top">BN_ULONG&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bn_8h.html#a8da498661b663764efd236e8973c5007">bn_add_words</a> (BN_ULONG *rp, const BN_ULONG *ap, const BN_ULONG *<a class="el" href="conf_8h.html#a8f12a78fdc053e4143bc0896f8b3d937">bp</a>, int num)</td></tr>
-<tr class="memitem:a32efc91cebb4b69fc06e1b4188ce4a59"><td class="memItemLeft" align="right" valign="top">BN_ULONG&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bn_8h.html#a32efc91cebb4b69fc06e1b4188ce4a59">bn_sub_words</a> (BN_ULONG *rp, const BN_ULONG *ap, const BN_ULONG *<a class="el" href="conf_8h.html#a8f12a78fdc053e4143bc0896f8b3d937">bp</a>, int num)</td></tr>
 <tr class="memitem:a2fb48fef14a13af148e4b43056608028"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ossl__typ_8h.html#a6fb19728907ec6515e4bfb716bffa141">BIGNUM</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bn_8h.html#a2fb48fef14a13af148e4b43056608028">get_rfc2409_prime_768</a> (<a class="el" href="ossl__typ_8h.html#a6fb19728907ec6515e4bfb716bffa141">BIGNUM</a> *bn)</td></tr>
 <tr class="memitem:abfc33c9721a0b6a874ce82f52e30eadd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ossl__typ_8h.html#a6fb19728907ec6515e4bfb716bffa141">BIGNUM</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bn_8h.html#abfc33c9721a0b6a874ce82f52e30eadd">get_rfc2409_prime_1024</a> (<a class="el" href="ossl__typ_8h.html#a6fb19728907ec6515e4bfb716bffa141">BIGNUM</a> *bn)</td></tr>
 <tr class="memitem:ab3aec59c4e8ca699ddcf008591575620"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ossl__typ_8h.html#a6fb19728907ec6515e4bfb716bffa141">BIGNUM</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bn_8h.html#ab3aec59c4e8ca699ddcf008591575620">get_rfc3526_prime_1536</a> (<a class="el" href="ossl__typ_8h.html#a6fb19728907ec6515e4bfb716bffa141">BIGNUM</a> *bn)</td></tr>
@@ -382,6 +379,16 @@ Functions</h2></td></tr>
 <tr class="memitem:a1c6be6e65204eb33b0cc223c294745d0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ossl__typ_8h.html#a6fb19728907ec6515e4bfb716bffa141">BIGNUM</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bn_8h.html#a1c6be6e65204eb33b0cc223c294745d0">get_rfc3526_prime_8192</a> (<a class="el" href="ossl__typ_8h.html#a6fb19728907ec6515e4bfb716bffa141">BIGNUM</a> *bn)</td></tr>
 <tr class="memitem:a8cd7a33528160d20566013ab21ac053f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bn_8h.html#a8cd7a33528160d20566013ab21ac053f">BN_bntest_rand</a> (<a class="el" href="ossl__typ_8h.html#a6fb19728907ec6515e4bfb716bffa141">BIGNUM</a> *rnd, int <a class="el" href="x509v3_8h.html#ab3c186980893d6836a68407d221ae9c9">bits</a>, int top, int bottom)</td></tr>
 <tr class="memitem:ae481396eb66937960f76eab02035b568"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bn_8h.html#ae481396eb66937960f76eab02035b568">ERR_load_BN_strings</a> (void)</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Low-level arithmetic operations</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>These functions are implemented in C and for several platforms in assembly language.</p>
+<dl class="section warning"><dt>Warning</dt><dd>These are internal functions used by the OpenSSL BIGNUM implementation. They are described here to facilitate debugging and extending the library. They are not to be used by applications. </dd></dl>
+</div></td></tr>
+<tr class="memitem:ac7390b2c1f95cf296aaa80068bbea55c"><td class="memItemLeft" align="right" valign="top">BN_ULONG&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bn_8h.html#ac7390b2c1f95cf296aaa80068bbea55c">bn_mul_add_words</a> (BN_ULONG *rp, const BN_ULONG *ap, int num, BN_ULONG w)</td></tr>
+<tr class="memitem:ab53b589b38d0dba70e7af60e433a674d"><td class="memItemLeft" align="right" valign="top">BN_ULONG&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bn_8h.html#ab53b589b38d0dba70e7af60e433a674d">bn_mul_words</a> (BN_ULONG *rp, const BN_ULONG *ap, int num, BN_ULONG w)</td></tr>
+<tr class="memitem:a5099f504342e8405343b2f34a7e2042b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bn_8h.html#a5099f504342e8405343b2f34a7e2042b">bn_sqr_words</a> (BN_ULONG *rp, const BN_ULONG *ap, int num)</td></tr>
+<tr class="memitem:a11b748f408b37078e940634d00c0acdf"><td class="memItemLeft" align="right" valign="top">BN_ULONG&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bn_8h.html#a11b748f408b37078e940634d00c0acdf">bn_div_words</a> (BN_ULONG <a class="el" href="ec__curve_8c.html#a5138e082c1d42b393c076f8f796b3c96">h</a>, BN_ULONG l, BN_ULONG d)</td></tr>
+<tr class="memitem:a8da498661b663764efd236e8973c5007"><td class="memItemLeft" align="right" valign="top">BN_ULONG&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bn_8h.html#a8da498661b663764efd236e8973c5007">bn_add_words</a> (BN_ULONG *rp, const BN_ULONG *ap, const BN_ULONG *<a class="el" href="conf_8h.html#a8f12a78fdc053e4143bc0896f8b3d937">bp</a>, int num)</td></tr>
+<tr class="memitem:a32efc91cebb4b69fc06e1b4188ce4a59"><td class="memItemLeft" align="right" valign="top">BN_ULONG&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bn_8h.html#a32efc91cebb4b69fc06e1b4188ce4a59">bn_sub_words</a> (BN_ULONG *rp, const BN_ULONG *ap, const BN_ULONG *<a class="el" href="conf_8h.html#a8f12a78fdc053e4143bc0896f8b3d937">bp</a>, int num)</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -389,7 +396,15 @@ Variables</h2></td></tr>
 *<a class="el" href="hpux_8cc.html#af3e37283d97a42ffc096d8958a745f32">a</a>, const <a class="el" href="ossl__typ_8h.html#a6fb19728907ec6515e4bfb716bffa141">BIGNUM</a> *field, <br class="typebreak"/>
 <a class="el" href="ossl__typ_8h.html#a0b235a35b7dd7922c097571ecd90e2bc">BN_CTX</a> *ctx)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bn_8h.html#a4b690234a5014fd63c061917a8a14f3a">BN_nist_mod_func</a> (const <a class="el" href="ossl__typ_8h.html#a6fb19728907ec6515e4bfb716bffa141">BIGNUM</a> *p)</td></tr>
 </table>
-<h2>Macro Definition Documentation</h2>
+<a name="details" id="details"></a><h2>Detailed Description</h2>
+<div class="textblock"><p>multiprecision integer arithmetics </p>
+<p>This library performs arithmetic operations on integers of arbitrary size. It was written for use in public key cryptography, such as RSA and Diffie-Hellman.</p>
+<p>It uses dynamic memory allocation for storing its data structures. That means that there is no limit on the size of the numbers manipulated by these functions, but return values must always be checked in case a memor allocation error has occurred.</p>
+<p>The basic object in this library is a BIGNUM. It is used to hold a single large integer. This type should be considered opaque and fields should not be modified or accessed directly.</p>
+<p>The creation of BIGNUM objects is described in BN_new(3); BN_add(3) describes most of the arithmetic operations. Comparison is described in BN_cmp(3); <a class="el" href="bn_8h.html#ac97841d49b39ffdd49fcda8b152c0677">BN_zero(3)</a> describes certain assignments, BN_rand(3) the generation of random numbers, BN_generate_prime(3) deals with prime numbers and BN_set_bit(3) with bit operations. The conversion of BIGNUMs to external formats is described in BN_bn2bin(3). </p>
+
+<p>Definition in file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+</div><h2>Macro Definition Documentation</h2>
 <a class="anchor" id="a1f2683dd027ced5cc0fc332a3ae37504"></a>
 <div class="memitem">
 <div class="memproto">
@@ -416,7 +431,7 @@ Variables</h2></td></tr>
 <b>Value:</b><div class="fragment"><div class="line">((((<a class="code" href="hpux_8cc.html#af3e37283d97a42ffc096d8958a745f32">a</a>)-&gt;top == 1) &amp;&amp; ((<a class="code" href="hpux_8cc.html#af3e37283d97a42ffc096d8958a745f32">a</a>)-&gt;d[0] == (BN_ULONG)(w))) || \</div>
 <div class="line">                                (((w) == 0) &amp;&amp; ((<a class="code" href="hpux_8cc.html#af3e37283d97a42ffc096d8958a745f32">a</a>)-&gt;top == 0)))</div>
 </div><!-- fragment -->
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00382">382</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00439">439</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -430,7 +445,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00568">568</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00625">625</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -444,7 +459,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00567">567</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00624">624</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -472,7 +487,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00775">775</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00832">832</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -490,7 +505,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00773">773</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00830">830</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -519,7 +534,7 @@ Variables</h2></td></tr>
 <div class="line">        <a class="code" href="bn_8h.html#a5aa5550d1ddd9ff4cc5f539a1fc5db45">bn_pollute</a>(<a class="code" href="hpux_8cc.html#af3e37283d97a42ffc096d8958a745f32">a</a>); \</div>
 <div class="line">        }</div>
 </div><!-- fragment -->
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00780">780</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00837">837</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -533,7 +548,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00256">256</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00280">280</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -563,7 +578,7 @@ Variables</h2></td></tr>
 <b>Value:</b><div class="fragment"><div class="line">((((((<a class="code" href="x509v3_8h.html#ab3c186980893d6836a68407d221ae9c9">bits</a>+BN_BITS2-1))/BN_BITS2)) &lt;= (<a class="code" href="hpux_8cc.html#af3e37283d97a42ffc096d8958a745f32">a</a>)-&gt;dmax)?\</div>
 <div class="line">        (<a class="code" href="hpux_8cc.html#af3e37283d97a42ffc096d8958a745f32">a</a>):<a class="code" href="bn_8h.html#a939e28f2f6df66c3e88717edef85e99d">bn_expand2</a>((<a class="code" href="hpux_8cc.html#af3e37283d97a42ffc096d8958a745f32">a</a>),(<a class="code" href="x509v3_8h.html#ab3c186980893d6836a68407d221ae9c9">bits</a>+BN_BITS2-1)/BN_BITS2))</div>
 </div><!-- fragment -->
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00683">683</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00740">740</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -577,7 +592,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00824">824</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00943">943</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -591,7 +606,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00825">825</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00944">944</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -605,7 +620,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00826">826</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00945">945</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -619,7 +634,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00827">827</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00946">946</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -633,7 +648,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00828">828</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00947">947</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -647,7 +662,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00829">829</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00948">948</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -661,7 +676,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00830">830</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00949">949</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -675,7 +690,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00831">831</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00950">950</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -689,7 +704,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00832">832</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00951">951</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -703,7 +718,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00833">833</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00952">952</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -717,7 +732,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00834">834</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00953">953</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -731,7 +746,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00835">835</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00954">954</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -745,7 +760,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00836">836</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00955">955</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -759,7 +774,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00837">837</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00956">956</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -773,7 +788,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00838">838</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00957">957</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -787,7 +802,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00839">839</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00958">958</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -801,7 +816,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00840">840</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00959">959</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -815,7 +830,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00841">841</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00960">960</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -829,7 +844,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00842">842</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00961">961</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -843,7 +858,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00843">843</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00962">962</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -857,7 +872,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00844">844</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00963">963</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -871,7 +886,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00845">845</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00964">964</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -885,7 +900,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00846">846</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00965">965</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -899,7 +914,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00847">847</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00966">966</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -913,7 +928,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00848">848</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00967">967</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -927,7 +942,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00849">849</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00968">968</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -941,7 +956,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00850">850</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00969">969</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -955,7 +970,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00851">851</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00970">970</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -969,7 +984,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00852">852</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00971">971</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -983,7 +998,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00853">853</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00972">972</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -997,7 +1012,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00854">854</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00973">973</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -1011,7 +1026,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00855">855</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00974">974</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -1025,7 +1040,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00856">856</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00975">975</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -1039,7 +1054,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00857">857</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00976">976</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -1053,7 +1068,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00858">858</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00977">977</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -1067,7 +1082,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00859">859</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00978">978</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -1081,7 +1096,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00860">860</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00979">979</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -1095,7 +1110,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00861">861</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00980">980</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -1109,7 +1124,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00862">862</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00981">981</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -1123,7 +1138,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00863">863</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00982">982</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -1137,7 +1152,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00864">864</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00983">983</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -1151,7 +1166,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00823">823</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00942">942</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -1169,7 +1184,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00774">774</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00831">831</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -1188,7 +1203,7 @@ Variables</h2></td></tr>
 <div class="line"><span class="comment">                                      * BN_mod_inverse() will call BN_mod_inverse_no_branch.</span></div>
 <div class="line"><span class="comment">                                      */</span></div>
 </div><!-- fragment -->
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00260">260</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00284">284</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -1202,7 +1217,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00263">263</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00287">287</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -1216,7 +1231,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00269">269</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00293">293</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -1230,7 +1245,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00258">258</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00282">282</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -1244,7 +1259,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00259">259</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00283">283</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -1283,7 +1298,7 @@ Variables</h2></td></tr>
 <div class="line">                tmp_gencb-&gt;arg = (cb_arg); \</div>
 <div class="line">                tmp_gencb-&gt;cb.cb_2 = (callback); }</div>
 </div><!-- fragment -->
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00353">353</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00410">410</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -1322,7 +1337,7 @@ Variables</h2></td></tr>
 <div class="line">                tmp_gencb-&gt;arg = (cb_arg); \</div>
 <div class="line">                tmp_gencb-&gt;cb.cb_1 = (callback); }</div>
 </div><!-- fragment -->
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00347">347</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00404">404</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -1350,7 +1365,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00272">272</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00296">296</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -1378,7 +1393,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00634">634</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00691">691</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -1412,7 +1427,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00618">618</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00675">675</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -1438,7 +1453,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>1 if a &lt; 0 and 0 otherwise </dd></dl>
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00443">443</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00500">500</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -1456,7 +1471,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00387">387</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00444">444</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -1474,7 +1489,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00385">385</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00442">442</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -1502,7 +1517,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00386">386</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00443">443</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -1520,7 +1535,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00384">384</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00441">441</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -1560,7 +1575,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00447">447</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00504">504</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -1574,7 +1589,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00152">152</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00176">176</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -1592,7 +1607,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00379">379</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00436">436</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -1610,7 +1625,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00389">389</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00446">446</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -1628,7 +1643,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00772">772</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00829">829</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -1644,7 +1659,7 @@ Variables</h2></td></tr>
 <b>Value:</b><div class="fragment"><div class="line">0 <span class="comment">/* default: select number of iterations</span></div>
 <div class="line"><span class="comment">                             based on the size of the number */</span></div>
 </div><!-- fragment -->
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00359">359</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00416">416</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -1674,7 +1689,7 @@ Variables</h2></td></tr>
 <div class="line">                                (<a class="code" href="des_8c.html#af55342ae4b8be9b599750497bddc6687">b</a>) &gt;=  150 ? 18 : \</div>
 <div class="line">                                <span class="comment">/* b &gt;= 100 */</span> 27)</div>
 </div><!-- fragment -->
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00366">366</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00423">423</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -1688,7 +1703,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00867">867</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00986">986</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -1702,7 +1717,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00868">868</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00987">987</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -1716,7 +1731,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00869">869</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00988">988</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -1730,7 +1745,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00870">870</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00989">989</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -1744,7 +1759,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00871">871</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00990">990</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -1758,7 +1773,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00872">872</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00991">991</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -1772,7 +1787,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00873">873</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00992">992</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -1786,7 +1801,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00874">874</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00993">993</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -1800,7 +1815,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00875">875</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00994">994</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -1814,7 +1829,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00876">876</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00995">995</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -1828,7 +1843,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00877">877</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00996">996</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -1842,7 +1857,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00880">880</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00999">999</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -1856,7 +1871,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00881">881</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l01000">1000</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -1870,7 +1885,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00878">878</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00997">997</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -1884,7 +1899,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00879">879</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00998">998</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -1898,7 +1913,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00883">883</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l01002">1002</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -1912,7 +1927,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00882">882</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l01001">1001</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -1926,7 +1941,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00884">884</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l01003">1003</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -1940,7 +1955,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00885">885</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l01004">1004</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -1954,7 +1969,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00154">154</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00178">178</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -1982,7 +1997,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00271">271</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00295">295</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -1996,7 +2011,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00153">153</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00177">177</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -2038,7 +2053,7 @@ Variables</h2></td></tr>
 <b>Value:</b><div class="fragment"><div class="line"><a class="code" href="bn_8h.html#a45f23a70e47aaee8e5a803b6bead2389">BN_mod_mul_montgomery</a>(\</div>
 <div class="line">        (r),(<a class="code" href="hpux_8cc.html#af3e37283d97a42ffc096d8958a745f32">a</a>),&amp;((mont)-&gt;RR),(mont),(ctx))</div>
 </div><!-- fragment -->
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00556">556</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00613">613</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -2066,7 +2081,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00776">776</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00833">833</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -2094,7 +2109,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00685">685</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00742">742</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -2136,7 +2151,7 @@ Variables</h2></td></tr>
 <div class="line">                                                 |  <a class="code" href="bn_8h.html#ae32355ce26c7a72424f52f6ae5358816">BN_FLG_STATIC_DATA</a> \</div>
 <div class="line">                                                 |  (n)))</div>
 </div><!-- fragment -->
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00276">276</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00300">300</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -2154,7 +2169,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00399">399</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00456">456</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -2177,7 +2192,7 @@ Variables</h2></td></tr>
 <div class="line">                _tmp_bn-&gt;neg = 0; \</div>
 <div class="line">        } <span class="keywordflow">while</span>(0)</div>
 </div><!-- fragment -->
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00390">390</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00447">447</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
@@ -2351,6 +2366,17 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>operates on the num word arrays ap, bp and rp. It computes ap + bp, places the result in rp, and returns the high word (carry). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">rp</td><td>output num word array </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ap</td><td>input num word array </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">bp</td><td>input num word array </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">num</td><td>size of word arrays rp, ap, and bp </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the high word (carry) </dd></dl>
 
 <p>Definition at line <a class="el" href="bn__asm_8c_source.html#l00342">342</a> of file <a class="el" href="bn__asm_8c_source.html">bn_asm.c</a>.</p>
 <div class="fragment"><div class="line">        {</div>
@@ -4535,6 +4561,16 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>divides the two word number (h,l) by d and returns the result. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">h</td><td>input numerator high word </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">l</td><td>input numerator low word </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">d</td><td>input denominator </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the result </dd></dl>
 
 <p>Definition at line <a class="el" href="bn__asm_8c_source.html#l00240">240</a> of file <a class="el" href="bn__asm_8c_source.html">bn_asm.c</a>.</p>
 <div class="fragment"><div class="line">        {</div>
@@ -11232,6 +11268,17 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>operates on the num word arrays rp and ap. It computes ap * w + rp, places the result in rp, and returns the high word (carry). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">rp</td><td>output num word array </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ap</td><td>input num word array </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">num</td><td>size of word arrays rp and np </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">w</td><td>input parameter </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the high word (carry) </dd></dl>
 
 <p>Definition at line <a class="el" href="bn__asm_8c_source.html#l00147">147</a> of file <a class="el" href="bn__asm_8c_source.html">bn_asm.c</a>.</p>
 <div class="fragment"><div class="line">        {</div>
@@ -11349,6 +11396,17 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>operates on the num word arrays rp and ap. It computes ap * w, places the result in rp, and returns the high word (carry). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">rp</td><td>output num word array </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ap</td><td>input num word array </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">num</td><td>size of word arrays rp and np </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">w</td><td>input parameter </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the high word (carry) </dd></dl>
 
 <p>Definition at line <a class="el" href="bn__asm_8c_source.html#l00176">176</a> of file <a class="el" href="bn__asm_8c_source.html">bn_asm.c</a>.</p>
 <div class="fragment"><div class="line">        {</div>
@@ -13463,6 +13521,15 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>operates on the num word array ap and the 2*num word array ap. It computes ap * ap word-wise, and places the low and high bytes of the result in rp. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">rp</td><td>output num word array </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ap</td><td>input num word array </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">num</td><td>size of ?? </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Definition at line <a class="el" href="bn__asm_8c_source.html#l00205">205</a> of file <a class="el" href="bn__asm_8c_source.html">bn_asm.c</a>.</p>
 <div class="fragment"><div class="line">        {</div>
@@ -13685,6 +13752,17 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>operates on the num word arrays ap, bp and rp. It computes ap - bp, places the result in rp, and returns the carry (1 if bp &gt; ap, 0 otherwise). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">rp</td><td>output num word array </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ap</td><td>input num word array </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">bp</td><td>input num word array </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">num</td><td>size of word arrays rp, ap, and bp </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the carry (1 if bp &gt; ap, 0 otherwise) </dd></dl>
 
 <p>Definition at line <a class="el" href="bn__asm_8c_source.html#l00394">394</a> of file <a class="el" href="bn__asm_8c_source.html">bn_asm.c</a>.</p>
 <div class="fragment"><div class="line">        {</div>
@@ -14914,14 +14992,14 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bn_8h_source.html#l00675">675</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
+<p>Definition at line <a class="el" href="bn_8h_source.html#l00732">732</a> of file <a class="el" href="bn_8h_source.html">bn.h</a>.</p>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 15 2014 18:16:50 for openssl by &#160;<a href="http://www.doxygen.org/index.html">
+Generated by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

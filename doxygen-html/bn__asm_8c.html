@@ -138,25 +138,25 @@ Functions</h2></td></tr>
           <td class="memname">BN_ULONG bn_add_words </td>
           <td>(</td>
           <td class="paramtype">BN_ULONG *&#160;</td>
-          <td class="paramname"><em>r</em>, </td>
+          <td class="paramname"><em>rp</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const BN_ULONG *&#160;</td>
-          <td class="paramname"><em>a</em>, </td>
+          <td class="paramname"><em>ap</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const BN_ULONG *&#160;</td>
-          <td class="paramname"><em>b</em>, </td>
+          <td class="paramname"><em>bp</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>n</em>&#160;</td>
+          <td class="paramname"><em>num</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -165,6 +165,17 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>operates on the num word arrays ap, bp and rp. It computes ap + bp, places the result in rp, and returns the high word (carry). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">rp</td><td>output num word array </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ap</td><td>input num word array </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">bp</td><td>input num word array </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">num</td><td>size of word arrays rp, ap, and bp </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the high word (carry) </dd></dl>
 
 <p>Definition at line <a class="el" href="bn__asm_8c_source.html#l00342">342</a> of file <a class="el" href="bn__asm_8c_source.html">bn_asm.c</a>.</p>
 <div class="fragment"><div class="line">        {</div>
@@ -248,6 +259,16 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>divides the two word number (h,l) by d and returns the result. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">h</td><td>input numerator high word </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">l</td><td>input numerator low word </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">d</td><td>input denominator </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the result </dd></dl>
 
 <p>Definition at line <a class="el" href="bn__asm_8c_source.html#l00240">240</a> of file <a class="el" href="bn__asm_8c_source.html">bn_asm.c</a>.</p>
 <div class="fragment"><div class="line">        {</div>
@@ -351,6 +372,17 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>operates on the num word arrays rp and ap. It computes ap * w + rp, places the result in rp, and returns the high word (carry). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">rp</td><td>output num word array </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ap</td><td>input num word array </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">num</td><td>size of word arrays rp and np </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">w</td><td>input parameter </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the high word (carry) </dd></dl>
 
 <p>Definition at line <a class="el" href="bn__asm_8c_source.html#l00147">147</a> of file <a class="el" href="bn__asm_8c_source.html">bn_asm.c</a>.</p>
 <div class="fragment"><div class="line">        {</div>
@@ -502,6 +534,17 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>operates on the num word arrays rp and ap. It computes ap * w, places the result in rp, and returns the high word (carry). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">rp</td><td>output num word array </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ap</td><td>input num word array </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">num</td><td>size of word arrays rp and np </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">w</td><td>input parameter </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the high word (carry) </dd></dl>
 
 <p>Definition at line <a class="el" href="bn__asm_8c_source.html#l00176">176</a> of file <a class="el" href="bn__asm_8c_source.html">bn_asm.c</a>.</p>
 <div class="fragment"><div class="line">        {</div>
@@ -606,19 +649,19 @@ Functions</h2></td></tr>
           <td class="memname">void bn_sqr_words </td>
           <td>(</td>
           <td class="paramtype">BN_ULONG *&#160;</td>
-          <td class="paramname"><em>r</em>, </td>
+          <td class="paramname"><em>rp</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const BN_ULONG *&#160;</td>
-          <td class="paramname"><em>a</em>, </td>
+          <td class="paramname"><em>ap</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>n</em>&#160;</td>
+          <td class="paramname"><em>num</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -627,6 +670,15 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>operates on the num word array ap and the 2*num word array ap. It computes ap * ap word-wise, and places the low and high bytes of the result in rp. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">rp</td><td>output num word array </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ap</td><td>input num word array </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">num</td><td>size of ?? </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Definition at line <a class="el" href="bn__asm_8c_source.html#l00205">205</a> of file <a class="el" href="bn__asm_8c_source.html">bn_asm.c</a>.</p>
 <div class="fragment"><div class="line">        {</div>
@@ -660,25 +712,25 @@ Functions</h2></td></tr>
           <td class="memname">BN_ULONG bn_sub_words </td>
           <td>(</td>
           <td class="paramtype">BN_ULONG *&#160;</td>
-          <td class="paramname"><em>r</em>, </td>
+          <td class="paramname"><em>rp</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const BN_ULONG *&#160;</td>
-          <td class="paramname"><em>a</em>, </td>
+          <td class="paramname"><em>ap</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const BN_ULONG *&#160;</td>
-          <td class="paramname"><em>b</em>, </td>
+          <td class="paramname"><em>bp</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>n</em>&#160;</td>
+          <td class="paramname"><em>num</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -687,6 +739,17 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>operates on the num word arrays ap, bp and rp. It computes ap - bp, places the result in rp, and returns the carry (1 if bp &gt; ap, 0 otherwise). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">rp</td><td>output num word array </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ap</td><td>input num word array </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">bp</td><td>input num word array </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">num</td><td>size of word arrays rp, ap, and bp </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the carry (1 if bp &gt; ap, 0 otherwise) </dd></dl>
 
 <p>Definition at line <a class="el" href="bn__asm_8c_source.html#l00394">394</a> of file <a class="el" href="bn__asm_8c_source.html">bn_asm.c</a>.</p>
 <div class="fragment"><div class="line">        {</div>
@@ -729,7 +792,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 15 2014 18:16:50 for openssl by &#160;<a href="http://www.doxygen.org/index.html">
+Generated by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>
