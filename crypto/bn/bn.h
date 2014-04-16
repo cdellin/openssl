@@ -122,6 +122,30 @@
  *
  */
 
+/** \file bn.h
+ * \brief multiprecision integer arithmetics
+ * 
+ * This library performs arithmetic operations on integers of arbitrary size.
+ * It was written for use in public key cryptography, such as RSA and
+ * Diffie-Hellman.
+ * 
+ * It uses dynamic memory allocation for storing its data structures. That
+ * means that there is no limit on the size of the numbers manipulated by
+ * these functions, but return values must always be checked in case a memor
+ *  allocation error has occurred.
+ *
+ * The basic object in this library is a BIGNUM. It is used to hold a single
+ * large integer. This type should be considered opaque and fields should not
+ * be modified or accessed directly.
+ *
+ * The creation of BIGNUM objects is described in BN_new(3); BN_add(3)
+ * describes most of the arithmetic operations. Comparison is described in
+ * BN_cmp(3); BN_zero(3) describes certain assignments, BN_rand(3) the
+ * generation of random numbers, BN_generate_prime(3) deals with prime
+ * numbers and BN_set_bit(3) with bit operations. The conversion of BIGNUMs
+ * to external formats is described in BN_bn2bin(3). 
+ */
+
 #ifndef HEADER_BN_H
 #define HEADER_BN_H
 
@@ -297,13 +321,46 @@ typedef struct bn_recp_ctx_st BN_RECP_CTX;
 typedef struct bn_gencb_st BN_GENCB;
 #endif
 
+/**
+ * \internal
+ * 
+ * \warning
+ * This is an internal data structure used by the OpenSSL BIGNUM
+ * implementation. It is described here to facilitate debugging and extending
+ * the library. It is not to be used by applications. 
+ * 
+ * \warning
+ * The integer value is stored in d, a malloc()ed array of words (BN_ULONG),
+ * least significant word first. A BN_ULONG can be either 16, 32 or 64 bits
+ * in size, depending on the 'number of bits' (BITS2) specified in
+ * openssl/bn.h.
+ *
+ * \warning
+ * dmax is the size of the d array that has been allocated. top is the
+ * number of words being used, so for a value of 4, bn.d[0]=4 and bn.top=1.
+ * neg is 1 if the number is negative. When a BIGNUM is 0, the d field can
+ * be NULL and top == 0.
+ *
+ * \warning
+ * flags is a bit field of flags which are defined in openssl/bn.h. The
+ * flags begin with BN_FLG_. The macros BN_set_flags(b,n) and
+ * BN_get_flags(b,n) exist to enable or fetch flag(s) n from BIGNUM
+ * structure b.
+ *
+ * \warning
+ * Various routines in this library require the use of temporary BIGNUM
+ * variables during their execution. Since dynamic memory allocation to
+ * create BIGNUMs is rather expensive when used in conjunction with repeated
+ * subroutine calls, the BN_CTX structure is used. This structure contains
+ * BN_CTX_NUM BIGNUMs, see BN_CTX_start(3). 
+ */
 struct bignum_st
 	{
-	BN_ULONG *d;	/* Pointer to an array of 'BN_BITS2' bit chunks. */
-	int top;	/* Index of last used d +1. */
+	BN_ULONG *d;	/**< Pointer to an array of 'BN_BITS2' bit chunks. */
+	int top;	/**< Index of last used d +1. */
 	/* The next are internal book keeping for bn_expand. */
-	int dmax;	/* Size of the d array. */
-	int neg;	/* one if the number is negative */
+	int dmax;	/**< Size of the d array. */
+	int neg;	/**< one if the number is negative */
 	int flags;
 	};
 
@@ -795,12 +852,74 @@ int RAND_pseudo_bytes(unsigned char *buf,int num);
 	bn_pollute(a); \
 	}
 
+/** @name Low-level arithmetic operations
+ *  These functions are implemented in C and for several platforms in
+ * assembly language.
+ * 
+ * \warning
+ * These are internal functions used by the OpenSSL BIGNUM
+ * implementation. They are described here to facilitate debugging and
+ * extending the library. They are not to be used by applications. 
+ */
+/**@{*/
+
+/** operates on the num word arrays rp and ap. It computes ap * w + rp,
+ * places the result in rp, and returns the high word (carry).
+ * \param[out] rp output num word array
+ * \param[in] ap input num word array
+ * \param[in] num size of word arrays rp and np
+ * \param[in] w input parameter
+ * \return the high word (carry)
+ */
 BN_ULONG bn_mul_add_words(BN_ULONG *rp, const BN_ULONG *ap, int num, BN_ULONG w);
+
+/** operates on the num word arrays rp and ap. It computes ap * w, places the
+ * result in rp, and returns the high word (carry).
+ * \param[out] rp output num word array
+ * \param[in] ap input num word array
+ * \param[in] num size of word arrays rp and np
+ * \param[in] w input parameter
+ * \return the high word (carry)
+ */
 BN_ULONG bn_mul_words(BN_ULONG *rp, const BN_ULONG *ap, int num, BN_ULONG w);
+
+/** operates on the num word array ap and the 2*num word array ap.
+ * It computes ap * ap word-wise, and places the low and high bytes of the
+ * result in rp.
+ * \param[out] rp output num word array
+ * \param[in] ap input num word array
+ * \param[in] num size of ??
+ */
 void     bn_sqr_words(BN_ULONG *rp, const BN_ULONG *ap, int num);
+
+/** divides the two word number (h,l) by d and returns the result. 
+ * \param[in] h input numerator high word
+ * \param[in] l input numerator low word
+ * \param[in] d input denominator
+ * \return the result
+ */
 BN_ULONG bn_div_words(BN_ULONG h, BN_ULONG l, BN_ULONG d);
+
+/** operates on the num word arrays ap, bp and rp. It computes ap + bp,
+ * places the result in rp, and returns the high word (carry).
+ * \param[out] rp output num word array
+ * \param[in] ap input num word array
+ * \param[in] bp input num word array
+ * \param[in] num size of word arrays rp, ap, and bp
+ * \return the high word (carry)
+ */
 BN_ULONG bn_add_words(BN_ULONG *rp, const BN_ULONG *ap, const BN_ULONG *bp,int num);
+
+/** operates on the num word arrays ap, bp and rp. It computes ap - bp,
+ * places the result in rp, and returns the carry (1 if bp > ap, 0 otherwise). 
+ * \param[out] rp output num word array
+ * \param[in] ap input num word array
+ * \param[in] bp input num word array
+ * \param[in] num size of word arrays rp, ap, and bp
+ * \return the carry (1 if bp > ap, 0 otherwise)
+ */
 BN_ULONG bn_sub_words(BN_ULONG *rp, const BN_ULONG *ap, const BN_ULONG *bp,int num);
+/**@}*/
 
 /* Primes from RFC 2409 */
 BIGNUM *get_rfc2409_prime_768(BIGNUM *bn);
